@@ -1,0 +1,225 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+<style>
+    .SaveButton {
+        border-color:#0c6c3f;
+        color:#0c6c3f; 
+        background:white; 
+      }
+      .SaveButton :hover {
+        background-color: #0c6c3f;
+        color: white;
+
+      }
+</style>
+{% if LANGUAGE_CODE == 'ar' %}
+<div class="container mt-5" dir="rtl">
+{% else %}
+<div class="container mt-5">
+{% endif %}
+
+
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <form id = 'contact_edit' method="post" class="col-md-6">
+          {% csrf_token %}
+          <input type="hidden" name="contact_id" value="{{ contact.id }}">
+          <div class="mb-3">
+            <label for="serial_number" class="form-label">{% trans 'Serial Number' %}</label>
+            <input type="text" id="serial_number" name="serial_number" class="form-control" value="{{ contact.serial_number }}" required readonly>
+          </div>
+          <div class="mb-3">
+            <label for="full_name" class="form-label">{% trans 'Full Name' %}</label>
+            <input type="text" id="full_name" name="full_name" class="form-control" value="{% if contact.full_name %}{{ contact.full_name }}{% endif %}" pattern="^[^\s]+$">
+          </div>
+          
+          <div class="mb-3">
+            <label for="company" class="form-label">{% trans 'Company' %}</label>
+            <input type="text" id="company" name="company" class="form-control" value="{% if contact.company %}{{ contact.company }}{% endif %}" pattern="^[^\s]+$">
+          </div>
+          <div class="mb-3">
+            <label for="branch" class="form-label">{% trans 'Branch' %}</label>
+            <input type="text" id="branch" name="branch" class="form-control" value="{% if contact.branch %}{{ contact.branch }}{% endif %}"pattern="^[^\s]+$">
+          </div>
+          <div class="mb-3">
+            <label for="department" class="form-label">{% trans 'Department' %}</label>
+            <input type="text" id="department" name="department" class="form-control" value="{% if contact.branch %}{{ contact.department }}
+            {% endif %}" pattern="^[^\s]+$">
+          </div>
+          <div class="mb-3">
+            <label for="title" class="form-label">{% trans 'Title' %}</label>
+            <input type="text" id="title" name="title" class="form-control" value="{% if contact.title %}{{ contact.title }}
+            {% endif %}" pattern="^[^\s]+$">
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-9">
+                <label for="phone" class="form-label">{% trans 'Phone' %}</label>
+                <input type="text" id="phone" name="phone" class="form-control"value="{% if contact.phone %}{{ contact.phone1 }}
+                {% endif %}"pattern="^[^\s]+$"  >
+              </div>
+            <div class="col-md-3">
+              <label for="ext_number" class="form-label">{% trans 'Ext. Number' %}</label>
+              <input type="text" id="ext_number" name="ext_number" class="form-control" value="{% if contact.ext_number %}{{ contact.ext_number }}
+              {% endif %}"pattern="^[^\s]+$" >
+            </div>
+
+          </div>
+          <div class="mb-3">
+            <label for="phone1" class="form-label">{% trans 'Mobile 1' %}</label>
+            <input type="text" id="phone1" name="phone1" class="form-control" value="{% if contact.phone1 %}{{ contact.phone1 }}
+            {% endif %}" pattern="^[^\s]+$">
+          </div>
+          <div class="mb-3">
+            <label for="phone2" class="form-label">{% trans 'Mobile 2' %}</label>
+            <input type="text" id="phone2" name="phone2" class="form-control" value="{% if contact.phone2 %}{{ contact.phone2 }}
+            {% endif %}" pattern="^[^\s]+$">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">{% trans 'Email' %}</label>
+            <input type="email" id="email" name="email" class="form-control" value="{% if contact.email %}{{ contact.email }}
+            {% endif %}" pattern="^[^\s]+$">
+          </div>
+          <div class="mb-3">
+            <label for="website_link" class="form-label">{% trans 'Website ' %}</label>
+            <input type="website_link" id="website_link" name="website_link" class="form-control"  value="{% if contact.website_link %}{{ contact.website_link }}
+            {% endif %}" pattern="^[^\s]+$">
+          </div>
+          <div class="mb-3">
+            <label for="whatsapp_link" class="form-label">{% trans 'WhatsApp ' %}</label>
+            <input type="whatsapp_link" id="whatsapp_link" name="whatsapp_link" class="form-control" value="{% if contact.whatsapp_link %}{{ contact.whatsapp_link }}
+            {% endif %}"pattern="^[^\s]+$" >
+          </div>
+          <div class="mb-3">
+            <label for="facebook_link" class="form-label">{% trans 'Facebook ' %}</label>
+            <input type="facebook_link" id="facebook_link" name="facebook_link" class="form-control" value="{% if contact.facebook_link %}{{ contact.facebook_link }}
+            {% endif %}"pattern="^[^\s]+$" >
+          </div>
+          <div class="mb-3">
+            <label for="twitter_link" class="form-label">{% trans 'Twitter ' %}</label>
+            <input type="twitter_link" id="twitter_link" name="twitter_link" class="form-control" value="{% if contact.twitter_link %}{{ contact.twitter_link }}
+            {% endif %}"pattern="^[^\s]+$" >
+          </div>
+          <div class="mb-3">
+            <label for="tiktok_link" class="form-label">{% trans 'TikTok ' %}</label>
+            <input type="tiktok_link" id="tiktok_link" name="tiktok_link" class="form-control" value="{% if contact.tiktok_link %}{{ contact.tiktok_link }}
+            {% endif %}"pattern="^[^\s]+$" >
+          </div>
+          <div class="mb-3">
+            <label for="instagram_link" class="form-label">{% trans 'Instagram ' %}</label>
+            <input type="instagram_link" id="instagram_link" name="instagram_link" class="form-control" value="{% if contact.instagram_link %}{{ contact.instagram_link }}
+            {% endif %}" pattern="^[^\s]+$">
+          </div>
+          <div class="mb-3">
+            <label for="zoom_link" class="form-label">{% trans 'Zoom ' %}</label>
+            <input type="zoom_link" id="zoom_link" name="zoom_link" class="form-control" value="{% if contact.zoom_link %}{{ contact.zoom_link }}
+            {% endif %}"pattern="^[^\s]+$" >
+          </div>
+          <div class="mb-3">
+            <label for="teams_link" class="form-label">{% trans 'Teams ' %}</label>
+            <input type="teams_link" id="teams_link" name="teams_link" class="form-control" value="{% if contact.teams_link %}{{ contact.teams_link }}{% endif %}"pattern="^[^\s]+$" >
+          </div>
+          <div class="mb-3">
+            <label for="telegram_link" class="form-label">{% trans 'Telegram ' %}</label>
+            <input type="telegram_link" id="telegram_link" name="telegram_link" class="form-control" value="{% if contact.telegram_link %}{{ contact.telegram_link }}{% endif %}"pattern="^[^\s]+$" >
+          </div>
+          <div class="mb-3">
+            <label for="gmail_link" class="form-label">{% trans 'Gmail ' %}</label>
+            <input type="gmail_link" id="gmail_link" name="gmail_link" class="form-control" value="{% if contact.gmail_link %}{{ contact.gmail_link }}{% endif %}"pattern="^[^\s]+$" >
+          </div>
+          <div class="mb-3">
+            <label for="outlook_link" class="form-label">{% trans 'Outlook ' %}</label>
+            <input type="outlook_link" id="outlook_link" name="outlook_link" class="form-control" value="{% if contact.outlook_link %}{{ contact.outlook_link }}{% endif %}"pattern="^[^\s]+$" >
+          </div>
+          <div class="mb-3">
+            <label for="linkedIn_link" class="form-label">{% trans 'LinkedIn ' %}</label>
+            <input type="linkedIn_link" id="linkedIn_link" name="linkedIn_link" class="form-control" value="{% if contact.linkedIn_link %}{{ contact.linkedIn_link }}{% endif %}"pattern="^[^\s]+$" >
+          </div>
+          <div class="mb-3">
+            <label for="Messaanger_link" class="form-label">{% trans 'Messenenger ' %}</label>
+            <input type="Messaanger_link" id="Messaanger_link" name="Messaanger_link" class="form-control "  value="{% if contact.Messaanger_link %}{{ contact.Messaanger_link }}{% endif %}"pattern="^[^\s]+$" >
+          </div>
+          <div class="mb-5">
+            <label for="address" class="form-label">{% trans 'Address' %}</label>
+            <textarea id="address" name="address" class="form-control" rows="3" style="resize: none; height: 100px;" pattern="^[^\s]+$">{% if contact.address %}{{ contact.address }}{% endif %}</textarea>
+            </div>
+        
+        <div class="d-grid mb-5">
+            <button class="SaveButton btn btn-success" type="submit" name="save_confirmation"  onclick="showConfirmationDialog(event)" value="confirm" >
+                {% trans 'Save' %}
+              </button>
+        </div>
+          
+          <!-- Modal -->
+          <div id="confirmationModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">{% trans "Congratulations" %}</h5>
+                  <button type="button" onclick="$('#confirmationModal').modal('hide')" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                  </button>
+                  
+                  
+                </div>
+                <div class="modal-body">
+                  <p>{% trans "Your info is saved successfully, please copy the following link" %}</p>
+                  {% url 'contact_detail' serial_number=contact.serial_number as contact_detail_url %}
+                  <p><strong><a href="{{ contact_detail_url }}">{{ contact_detail_url }}</a></strong></p>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button class="btn btn-secondary mr-2" type="button" onclick="$('#confirmationModal').modal('hide')">
+                        {% trans "Cancel" %}
+                    </button>
+                    <div>
+                        <button type="button" class="btn btn-primary ml-0" onclick="copyToClipboard('{{ contact_detail_url }}')">
+                            {% trans "Copy Link" %}
+                        </button>
+                        <a class="btn btn-success SaveButton" href="{{ contact_detail_url }}" target="_blank">{% trans 'Preview' %}</a>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+          <script>
+            function showConfirmationDialog(event) {
+                event.preventDefault();
+                
+                // save the form data
+                $.ajax({
+                    type: 'POST',
+                    url: $(event.target).closest('form').attr('action'),
+                    data: $(event.target).closest('form').serialize(),
+                    success: function() {
+                        // show the confirmation modal
+                        $('#confirmationModal').modal('show');
+                    },
+                    error: function() {
+                        alert('Failed to save data');
+                    }
+                });
+            }
+          
+            function redirectAndCopy() {
+              // get the redirect URL from Django template variable
+              const redirectUrl = '{{ contact_detail }}';
+              // copy redirect URL to clipboard
+              navigator.clipboard.writeText(redirectUrl).then(function() {
+                // redirect to the contact detail page
+                window.location.href = redirectUrl;
+              }, function() {
+                // handle clipboard write error
+                alert('Failed to copy redirect URL to clipboard');
+              });
+            }
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(function() {
+                  alert('URL copied to clipboard!');
+                }, function() {
+                  alert('Failed to copy URL to clipboard');
+                });
+              }
+          </script>
+{% endblock content %}

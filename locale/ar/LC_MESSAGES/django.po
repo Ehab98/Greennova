@@ -1,0 +1,381 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"Report-Msgid-Bugs-To: webmaster@localhost\n"
+"POT-Creation-Date: 2023-05-11 13:56:12\n"
+"PO-Revision-Date: 2023-05-11 13:56:12\n"
+"Last-Translator: Server <root@localhost>\n"
+"Language-Team: English <webmaster@localhost>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:95
+#: .\ContactManager\templates\ContactManager\all_contacts.html:17
+msgid "Address"
+msgstr "العنوان"
+
+#: .\core\settings.py:109
+msgid "Arabic"
+msgstr "العربية"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:23
+msgid "Branch"
+msgstr "الفرع"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:173
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:19
+#: .\ContactManager\templates\ContactManager\all_contacts.html:16
+msgid "Company"
+msgstr "الشركة"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:161
+msgid "Congratulations"
+msgstr "تهانينا"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:11
+msgid "Contact Details"
+msgstr "التفاصيل"
+
+#: .\templates\base.html:27
+msgid "Contact Form"
+msgstr "إضافة جهه"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:11
+msgid "Contact information Saved successfully."
+msgstr "تم تعديل البيانات بنجاح"
+
+#: .\ContactManager\views.py:22
+msgid "Contacts"
+msgstr "الجهات"
+
+#: .\ContactManager\views.py:23
+msgid "Contacts Manager"
+msgstr "الادارة"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:170
+msgid "Copy Link"
+msgstr "نسخ الرابط"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:47
+msgid "Department"
+msgstr "الإدارة"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:41
+msgid "Edit"
+msgstr "التالي"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:47
+#: .\ContactManager\templates\ContactManager\all_contacts.html:15
+msgid "Email"
+msgstr "البريد الإلكترونى"
+
+#: .\core\settings.py:110
+msgid "English"
+msgstr "الانجليزية"
+
+#: .\ContactManager\templates\ContactManager\SN.html:24
+msgid "Enter Serial Number"
+msgstr "رقم الكارت"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:63
+msgid "Ext. Number"
+msgstr "الرقم الداخلى"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:95
+msgid "Facebook "
+msgstr "الفيسبوك"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:15
+msgid "Full Name"
+msgstr "الاسم"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:130
+msgid "Gmail "
+msgstr "Gmail"
+
+#: .\ContactManager\templates\ContactManager\index.html:12
+#: .\templates\base.html:21
+msgid "Greenova"
+msgstr "جرينوفا"
+
+#: .\templates\base.html:25
+msgid "Home"
+msgstr "الرئيسية"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:110
+msgid "Instagram "
+msgstr "الإنستجرام"
+
+#: .\templates\base.html:30
+msgid "Language"
+msgstr "اللغات"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:140
+msgid "LinkedIn "
+msgstr "لينكد ان"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:103
+#: .\ContactManager\templates\ContactManager\edit_contact.html:116
+msgid "Messaanger "
+msgstr "ماسنجر"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:80
+msgid "Messaanger link"
+msgstr "ماسنجر"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:145
+msgid "Messenger "
+msgstr "ماسنجر"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:70
+msgid "Mobile 1"
+msgstr "رقم المحمول 1"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:75
+msgid "Mobile 2"
+msgstr "رقم المحمول 2"
+
+#: .\ContactManager\templates\ContactManager\all_contacts.html:19
+msgid "More Info"
+msgstr "مزيد من المعلومات"
+
+#: .\ContactManager\templates\ContactManager\SN.html:40
+msgid "Next"
+msgstr "التالي"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:27
+msgid "No QR code available."
+msgstr "رمز الإستجابة غير متاح"
+
+msgid "None"
+msgstr "فارغ"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:135
+msgid "Outlook "
+msgstr "الاوت لوك"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:58
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#: .\ContactManager\templates\ContactManager\SN.html:41
+msgid "Please enter a serial number"
+msgstr "من فضلك أدخل الرقم المطبوع على الكارت"
+
+#: .\ContactManager\templates\ContactManager\SN.html:31
+msgid "Please insert the serial number printed on card"
+msgstr "من فضلك أدخل الرقم المطبوع على الكارت"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:175
+msgid "Preview"
+msgstr "عرض البيانات"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:23
+msgid "QrCode"
+msgstr "رمز الإستجابة"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:11
+msgid "Serial Number"
+msgstr "رقم الكارت"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:103
+msgid "Submit"
+msgstr "حفظ"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:120
+msgid "Teams "
+msgstr "تيمز"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:125
+msgid "Telegram "
+msgstr "تليجرام"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:105
+msgid "TikTok "
+msgstr "تيك توك"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:52
+msgid "Title"
+msgstr "المسمى الوظيفى"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:100
+msgid "Twitter "
+msgstr "تويتر"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:38
+msgid "Updated day"
+msgstr "تاريخ التعديل"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:85
+msgid "Website "
+msgstr "الموقع الإلكترونى"
+
+#: .\ContactManager\templates\ContactManager\index.html:11
+msgid "Welcome to"
+msgstr "مرحبا بك فى"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:90
+msgid "WhatsApp "
+msgstr "الواتس اب"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:167
+msgid "Your info is saved successfully, please copy the following link"
+msgstr "تم حفظ بياناتك بنجاح , من فضلك انسخ الرابط الاتي"
+
+#: .\ContactManager\templates\ContactManager\edit_contact.html:115
+msgid "Zoom "
+msgstr "زووم"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:36
+msgid "address"
+msgstr "العنوان"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:18
+msgid "branch"
+msgstr "الفرع"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:17
+msgid "company"
+msgstr "الشركة"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:27
+msgid "department"
+msgstr "الإدارة"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:24
+msgid "email"
+msgstr "البريد الإلكترونى"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:21
+msgid "ext number"
+msgstr "الرقم الداخلى"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:35
+msgid "ext_number"
+msgstr "الرقم الداخلى"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:59
+msgid "facebook "
+msgstr "الفيسبوك"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:27
+msgid "facebook link"
+msgstr "الفيسبوك"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:87
+msgid "gmail "
+msgstr "Gmail"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:34
+msgid "gmail link"
+msgstr "Gmail"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:71
+msgid "instagram "
+msgstr "الإنستجرام"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:30
+msgid "instagram link"
+msgstr "الإنستجرام"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:99
+#: .\ContactManager\templates\ContactManager\edit_contact.html:112
+msgid "linkedIn "
+msgstr "لينكد ان"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:77
+msgid "linkedIn link"
+msgstr "لينكد ان"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:99
+msgid "map "
+msgstr "موقعك ع الخريطة"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:37
+msgid "map link"
+msgstr "موقعك ع الخريطة"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:91
+msgid "outlook "
+msgstr "الاوت لوك"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:35
+msgid "outlook link"
+msgstr "الاوت لوك"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:17
+msgid "phone number"
+msgstr "رقم المحمول"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:39
+msgid "phone1"
+msgstr "رقم المحمول 1"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:43
+msgid "phone2"
+msgstr "رقم المحمول 2"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:79
+msgid "teams "
+msgstr "تيمز"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:32
+msgid "teams link"
+msgstr "تيمز"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:83
+msgid "telegram "
+msgstr "تليجرام"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:33
+msgid "telegram link"
+msgstr "تليجرام"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:67
+msgid "tiktok "
+msgstr "تيك توك"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:29
+msgid "tiktok link"
+msgstr "تيك توك"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:31
+msgid "title"
+msgstr "المسمى الوظيفى"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:63
+msgid "twitter "
+msgstr "تويتر"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:28
+msgid "twitter link"
+msgstr "تويتر"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:51
+msgid "website "
+msgstr "الموقع الإلكترونى"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:25
+msgid "website link"
+msgstr "الموقع الإلكترونى"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:55
+msgid "whatsapp "
+msgstr "الواتس اب"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:26
+msgid "whatsapp link"
+msgstr "الواتس اب"
+
+#: .\ContactManager\templates\ContactManager\add_contact.html:75
+msgid "zoom "
+msgstr "زووم"
+
+#: .\ContactManager\templates\ContactManager\contact_detail.html:31
+msgid "zoom link"
+msgstr "زووم"

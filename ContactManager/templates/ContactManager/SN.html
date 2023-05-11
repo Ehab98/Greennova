@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+<style>
+  .edit_SN {
+    background-color: white;
+    color: #0c6c3f;
+    border-color: #0c6c3f;
+}
+
+.edit_SN:hover {
+    background-color: #0c6c3f;
+    color: white;
+}
+
+.home-btn {
+    background-color: white;
+    color: #0c6c3f;
+    border-color: #0c6c3f;
+}
+
+.home-btn:hover {
+    background-color: #0c6c3f;
+    color: white;
+}
+</style>
+        <!-- Page Content-->
+        <div class="container py-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <h4 class="text-center mb-4">{% trans "Please insert the serial number printed on card" %}</h4>
+
+              <form method="get" action="{% url 'edit_contact_SN' serial_number=0 %}" id="serial-number-form">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="serial_number" id="serial-number-input" placeholder="{% trans 'Enter Serial Number' %}" aria-label="{% trans 'Enter Serial Number' %}" aria-describedby="serial-number-btn">
+                </div>
+                <div class="row justify-content-center gx-4 gx-lg-5">
+                  <div class="col-md-6 mb-6">
+                    <div class="card h-100">
+                      <button class="edit_SN btn btn-success  fs-6" type="submit" id="serial-number-btn">{% trans 'Next' %}</button>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-6">
+                    <div class="card h-100">
+                      <a href="{% url 'home' %}" class="edit_SN btn btn-secondary fs-6">{% trans 'Home' %}</a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        </div>
+        <script>
+            document.querySelector('#serial-number-form').addEventListener('submit', function(event) {
+              var serialNumber = document.querySelector('#serial-number-input').value;
+              if (!serialNumber) {
+                alert('{% trans "Please enter a serial number" %}');
+                event.preventDefault();
+              } else {
+                this.action = serialNumber + "/";
+              }
+            });
+        </script>
+        
+        
+{% endblock content %}
+
+

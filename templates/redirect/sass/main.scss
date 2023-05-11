@@ -1,0 +1,65 @@
+@import "variables";
+@import "fonts";
+@import "header";
+@import "footer";
+@import "t&c";
+@import "about";
+
+.how-to-section {
+  margin: 10px 0;
+  padding: 20px 0;
+  &.grey {
+    background-color: $pale-grey;
+  }
+}
+
+.text-wrapper {
+  height: 400px;
+  position: relative;
+  .section-text {
+    position: absolute;
+    top: 40%;
+    height: 100px;
+    margin-top: -50px;
+  }
+}
+
+.title {
+  font-family: Lato;
+  font-weight: 100;
+  font-style: italic;
+  color: $warm-grey;
+  margin-bottom: 30px;
+}
+
+.section-header {
+  font-family: Aller;
+  font-weight: bold;
+  color: $dark-periwinkle;
+}
+
+.subtext {
+  font-family: Lato;
+  font-size: 18px;
+  color: $common-grey;
+}
+
+.how-to-image {
+  height: 400px;
+  max-width: 100%;
+}
+
+@media (max-width: $screen-xs-max) {
+  .text-wrapper {
+    height: auto;
+    position: static;
+    .section-text {
+      position: static;
+      height: auto;
+      margin-top: 0;
+    }
+  }
+  .how-to-image {
+    height: 200px;
+  }
+}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+<style>
+    .LangButton {
+        border-color:#0c6c3f;
+        color:#0c6c3f; 
+        background:white; 
+      }
+      .LangButton :hover {
+        background-color: #0c6c3f;
+        color: white;
+
+      }
+</style>
+        <!-- Page Content-->
+        <div class="container px-4 px-lg-5">
+            <!-- Heading Row-->
+            <div class="row gx-4 gx-lg-5 align-items-center my-5">
+                <center>
+                <div class="col-lg-7">
+                    <a href="https://www.greennova.net">
+                        <img class="img-fluid rounded mb-4 mb-lg-0 mx-auto d-block" src="{% static 'assets/GRENNOVA/grennova 1/grennovah1.jpg' %}" alt="Grennova logo">
+                    </a>
+                </div>
+                </center>
+
+            </div>
+            <!-- Content Row-->
+            <div class="row justify-content-center gx-4 gx-lg-5">
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <a href="/en/SN/" class="LangButton btn btn-success" onclick="changeLanguage('en')">{% trans "English" %}</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <a href="/ar/SN/" class="LangButton btn btn-success" onclick="changeLanguage('ar')">{% trans "عربي" %}</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script>
+            function changeLanguage(languageCode) {
+                var currentUrl = window.location.pathname;
+                var newUrl = currentUrl.replace(/\/(ar|en)\//, '/' + languageCode + '/');
+                window.location.href = newUrl;
+            }
+            
+        </script>
+{% endblock content %}

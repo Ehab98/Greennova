@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+
+        <!-- Page Content-->
+        <div class="container px-4 px-lg-5" {% if LANGUAGE_CODE == 'ar' %} dir="rtl"{% endif %}>
+            <!-- Content Row-->
+            <div class="row gx-4 gx-lg-5">
+                {% for contact in contacts %}
+                <div class="col-md-4 mb-5">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h2 class="card-title">{{contact.full_name}}</h2>
+                            <p class="card-text"><strong>{% trans "Email" %}</strong>: {{contact.email}}</p>
+                            <p class="card-text"><strong>{% trans "Company" %}</strong>:{{contact.company}}</p>
+                            <p class="card-text"><strong>{% trans "Address" %}</strong>:{{contact.address}}</p>
+                        </div>
+                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="{% url 'contact_detail' pk=contact.pk %}">{% trans "More Info" %}</a></div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+{% endblock content %}

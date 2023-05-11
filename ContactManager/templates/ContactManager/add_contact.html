@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+<body onload="initMap()"  dir="rtl">
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+
+
+  <form method="post" class="col-md-6" >
+    {% csrf_token %}
+    <div class="mb-3" >
+      <label for="serial_number" class="form-label">{% trans 'Serial Number' %}:</label>
+      <input type="text" id="serial_number" name="serial_number" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="full_name" class="form-label">{% trans 'Full Name' %}:</label>
+      <input type="text" id="full_name" name="full_name" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="company" class="form-label">{% trans 'Company' %}:</label>
+      <input type="text" id="company" name="company" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="branch" class="form-label">{% trans 'Branch' %}:</label>
+      <input type="text" id="branch" name="branch" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="department" class="form-label">{% trans 'department' %}:</label>
+      <input type="text" id="department" name="department" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="title" class="form-label">{% trans 'title' %}:</label>
+      <input type="text" id="title" name="title" class="form-control" >
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-3">
+        <label for="ext_number" class="form-label">{% trans 'ext_number' %}:</label>
+        <input type="text" id="ext_number" name="ext_number" class="form-control" >
+      </div>
+      <div class="col-md-9">
+        <label for="phone1" class="form-label">{% trans 'phone1' %}:</label>
+        <input type="text" id="phone1" name="phone1" class="form-control" >
+      </div>
+    </div>
+    
+    <div class="mb-3">
+      <label for="phone2" class="form-label">{% trans 'phone2' %}:</label>
+      <input type="text" id="phone2" name="phone2" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">{% trans 'Email' %}:</label>
+      <input type="email" id="email" name="email" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="website_link" class="form-label">{% trans 'website ' %}:</label>
+      <input type="website_link" id="website_link" name="website_link" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="whatsapp_link" class="form-label">{% trans 'whatsapp ' %}:</label>
+      <input type="whatsapp_link" id="whatsapp_link" name="whatsapp_link" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="facebook_link" class="form-label">{% trans 'facebook ' %}:</label>
+      <input type="facebook_link" id="facebook_link" name="facebook_link" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="twitter_link" class="form-label">{% trans 'twitter ' %}:</label>
+      <input type="twitter_link" id="twitter_link" name="twitter_link" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="tiktok_link" class="form-label">{% trans 'tiktok ' %}:</label>
+      <input type="tiktok_link" id="tiktok_link" name="tiktok_link" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="instagram_link" class="form-label">{% trans 'instagram ' %}:</label>
+      <input type="instagram_link" id="instagram_link" name="instagram_link" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="zoom_link" class="form-label">{% trans 'zoom ' %}:</label>
+      <input type="zoom_link" id="zoom_link" name="zoom_link" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="teams_link" class="form-label">{% trans 'teams ' %}:</label>
+      <input type="teams_link" id="teams_link" name="teams_link" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="telegram_link" class="form-label">{% trans 'telegram ' %}:</label>
+      <input type="telegram_link" id="telegram_link" name="telegram_link" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="gmail_link" class="form-label">{% trans 'gmail ' %}:</label>
+      <input type="gmail_link" id="gmail_link" name="gmail_link" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="outlook_link" class="form-label">{% trans 'outlook ' %}:</label>
+      <input type="outlook_link" id="outlook_link" name="outlook_link" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="linkedIn_link" class="form-label">{% trans 'linkedIn ' %}:</label>
+      <input type="linkedIn_link" id="linkedIn_link" name="linkedIn_link" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="Messaanger_link" class="form-label">{% trans 'Messaanger ' %}:</label>
+      <input type="Messaanger_link" id="Messaanger_link" name="Messaanger_link" class="form-control" >
+    </div>
+    <div class="mb-3">
+      <label for="address" class="form-label">{% trans 'Address' %}:</label>
+      <textarea id="address" name="address" class="form-control" rows="4" ></textarea>
+    </div>
+
+
+    <div class="d-grid">
+      <button class="btn btn-primary" type="submit">{% trans 'Submit' %}</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  function initMap() {
+    // Initialize the map
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 8
+    });
+
+    // Add a marker to the map when the user clicks on it
+    var marker = new google.maps.Marker({
+      position: map.getCenter(),
+      map: map,
+      draggable: true
+    });
+
+    // Update the coordinates in the text area when the marker is dragged
+    google.maps.event.addListener(marker, 'dragend', function() {
+      var lat = marker.getPosition().lat();
+      var lng = marker.getPosition().lng();
+      var coords = lat + ',' + lng;
+      document.getElementById('map_link').value = coords;
+    });
+  }
+</script>
+</body>
+{% endblock content %}
+
